@@ -366,7 +366,10 @@ public class Mapa {
 	}
 	
 	public  void serpDeleteTail() {
-		boxes[serp.getXTail()][serp.getYTail()].setBackground(new Color(210, 255, 151));
+		if(serp.getXTail() >= 0 && serp.getXTail() < 20
+				&& serp.getYTail() >= 0 && serp.getYTail() < 18) {
+					boxes[serp.getXTail()][serp.getYTail()].setBackground(new Color(210, 255, 151));
+				}
 		
 		switch(serp.getTailDir()) {
 		
